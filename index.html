@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Registro de Empleados</h1>
+
+        <form id="formEmpleado">
+
+            <div class="campo">
+                <label for="nit">NIT:</label>
+                <input 
+                    type="text" 
+                    id="nit" 
+                    maxlength="13"
+                    placeholder="Ingrese el NIT"
+                >
+                <span id="errorNit" class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    maxlength="30"
+                    placeholder="Ingrese el nombre"
+                >
+                <span id="errorNombre" class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input 
+                    type="text" 
+                    id="apellido" 
+                    maxlength="30"
+                    placeholder="Ingrese el apellido"
+                >
+                <span id="errorApellido" class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input 
+                    type="text" 
+                    id="fechaNacimiento"
+                    maxlength="10"
+                    placeholder="dd/mm/aaaa"
+                >
+                <span id="errorFecha" class="error"></span>
+            </div>
+
+            <button type="submit">Agregar empleado</button>
+
+        </form>
+
+        <p id="mensaje"></p>
+
+        <h2>Lista de empleados</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>NIT</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de nacimiento</th>
+                </tr>
+            </thead>
+
+            <tbody id="cuerpoTabla">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
